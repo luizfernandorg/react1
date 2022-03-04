@@ -1,20 +1,21 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import Link from "./Link.component"
 
-// function Greeting() {
-//   return <h1><Link link="http://google.com"/> This is Fernando and this is my first component</h1>
-// }
-// const Greeting = () => React.createElement("h1", {}, "Hello World")
-const Greeting = () => (<div> 
-                          <h1>Hello World!</h1>
-                        </div>)
-// const Greeting = () => React.createElement(
-//           "div", 
-//           {}, 
-//           React.createElement(
-//             'h1',
-//             {},
-//             "Hello World! :)")
-//           )
-ReactDOM.render(<Greeting/>, document.getElementById("root"))
+function BookList() {
+  return (
+    <section className="container-fluid">
+      <Book/>
+    </section>
+  )
+}
+const Book = () => {
+  return (
+    <article className="row">
+      <Image/>
+    </article>
+  )
+}
+
+const Image = () => (<img className="img-fluid" src="https://images-na.ssl-images-amazon.com/images/I/91-EIJiYneL._AC_UL604_SR604,400_.jpg" alt="book"/>)
+
+ReactDOM.render(<BookList/>, document.getElementById("root"))
