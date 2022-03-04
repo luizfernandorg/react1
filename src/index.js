@@ -9,5 +9,12 @@ import Link from "./Link.component"
 const Greeting = () => (<div> 
                           <h1>Hello World!</h1>
                         </div>)
-
+// const Greeting = () => React.createElement(
+//           "div", 
+//           {}, 
+//           React.createElement(
+//             'h1',
+//             {},
+//             "Hello World! :)")
+//           )
 ReactDOM.render(<Greeting/>, document.getElementById("root"))
