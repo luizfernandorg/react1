@@ -2,6 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom"
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css'
+
 const livros = [
   {
     'title':"Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
@@ -29,7 +30,7 @@ const livros = [
     'url':"https://images-na.ssl-images-amazon.com/images/I/81a9hH8cL+L._AC_UL204_SR204,250_.jpg"
   },
 ]
-const rows = []
+
 function BookList() {
   return (
     <section className="row">
