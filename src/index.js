@@ -35,7 +35,9 @@ const livros = [
     'url':"https://images-na.ssl-images-amazon.com/images/I/81a9hH8cL+L._AC_UL204_SR204,250_.jpg"
   },
 ]
-
+const clickHandler = (event) => {
+  console.log(event.target.attributes[1].nodeValue)
+}
 function BookList() {
   return (
     <section className="row">
@@ -48,10 +50,11 @@ function BookList() {
 }
 const Book = ({title,author,url}) => {
   return (
-    <article className="cold-sm-2 col-md-3 col-xl-2">
+    <article className="col-sm-4 col-md-4 col-xl-2">
       <Image url={url}/>
       <Title title={title}/>
       <Author author={author}/>
+      <button type="button" author={author} onClick={clickHandler}>Click</button>
     </article>
   )
 }
