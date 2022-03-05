@@ -36,23 +36,24 @@ function BookList() {
     <section className="row">
       {
         livros.map((e,i) => <Book title={e.title} author={e.author} url={e.url}/>)
-      }  
+      }
     </section>
   )
 }
-const Book = (props) => {
-  const {title,author,url} = props
+const Book = ({title,author,url}) => {
   return (
     <article className="col-xl-3">
-      <Image url={url}/>
+      <Image url={url}>
+        <p>asd fa dfa sd fasdfas dsaddfa sfasdf sadf</p>
+      </Image>
       <Title title={title}/>
       <Author author={author}/>
     </article>
   )
 }
 
-const Image = (props) => (<img src={props.url} alt="book"/>)
-const Title = (props) => (<h1 className="title">{props.title}</h1>)
-const Author = (props) => (<h4 className="author">{props.author}</h4>)
+const Image = ({url,children}) => (<><img src={url} alt="book"/>{children}</>)
+const Title = ({title}) => (<h1 className="title">{title}</h1>)
+const Author = ({author}) => (<h4 className="author">{author}</h4>)
 
 ReactDOM.render(<BookList/>, document.getElementById("root"))
